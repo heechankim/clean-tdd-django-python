@@ -5,5 +5,6 @@ db.sqlite3
 chromedriver
 
 # cache
-__pycache__
-*.pyc
+superlists/__pycache__/*
+__pycache__/
+*.py[cod]
