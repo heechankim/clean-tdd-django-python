@@ -5,11 +5,16 @@ CURRENT: 113 page
 # 2022.01.22 6장 최소 동작 사이트 구축
 DONE: FT가 끝난 후에 결과물을 제거한다.
         ㄴ LiveServerTestCase 이용
-TODO: 모델을 조정해서 아이템들이 다른 목록과 연계되도록 한다.
-TODO: 각 목록별 고유 URL을 추가한다.
+DONE: 모델을 조정해서 아이템들이 다른 목록과 연계되도록 한다.
+        ㄴ Item model에 List field 추가
+DONE: 각 목록별 고유 URL을 추가한다.
 DONE: POST를 이용해서 새로운 목록을 생성하는 URL을 추가한다.
         ㄴ /lists/new 추가
-TODO: POST를 이용해서 새로운 아이템을 기존 목록에 추가하는 URL을 만든다.
+DONE: POST를 이용해서 새로운 아이템을 기존 목록에 추가하는 URL을 만든다.
+        ㄴ add_item url 추가, list.html 템플릿에 .item_set 추가 (reverse lookup) #220122_5
 
 # 2022.01.25
 TODO: 노션 페이지에 현재까지 어떤 테스트를 하는지 정리할 것.
+TODO: #220122_5 reverse lookup 에 대해서 알아보기
+
+TODO: urls.py에 있는 중복 코드를 리팩터링 한다.
