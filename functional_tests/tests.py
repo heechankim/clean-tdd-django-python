@@ -7,9 +7,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.remote.webdriver import WebElement
 
 # Django
-from django.test import LiveServerTestCase
+from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 
-class NewVisitorTest(LiveServerTestCase):
+
+class NewVisitorTest(StaticLiveServerTestCase):
     def setUp(self):
         options = webdriver.ChromeOptions()
         self.browser = webdriver.Chrome(service=Service('./chromedriver'), options=options)
