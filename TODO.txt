@@ -1,6 +1,6 @@
 PROJECT: superlists
 SOURCE: 클린코드를 위한 테스트 주도 개발
-CURRENT: 113 page
+CURRENT: 131 page
 
 # 2022.01.22 6장 최소 동작 사이트 구축
 DONE: FT가 끝난 후에 결과물을 제거한다.
@@ -18,3 +18,7 @@ TODO: 노션 페이지에 현재까지 어떤 테스트를 하는지 정리할 �
 TODO: #220122_5 reverse lookup 에 대해서 알아보기
 
 TODO: urls.py에 있는 중복 코드를 리팩터링 한다.
+
+# 2022.02.20 2부 웹 개발 핵심편
+TODO: 신규 및 기존 목록 추가를 위한 크고 멋있는 입력 필드
+TODO: 크고 시선을 끄는 중앙 입력 박스

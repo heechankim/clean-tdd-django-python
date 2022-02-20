@@ -4,6 +4,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
+from selenium.webdriver.remote.webdriver import WebElement
+
 # Django
 from django.test import LiveServerTestCase
 
@@ -91,3 +93,26 @@ class NewVisitorTest(LiveServerTestCase):
         self.assertIn('우유 사기', page_text)
 
         # 만족하고 잠자리에 든다.
+
+    def test_layout_and_styling(self):
+        # 찬은 메인 페이지를 방문한다.
+        self.browser.get(self.live_server_url)
+        self.browser.set_window_size(1024, 768)
+
+        # 그는 입력 상자가 가운데 배치된 것을 본다.
+        inputbox: WebElement = self.browser.find_element(By.ID, 'id_new_item')
+        self.assertAlmostEqual(
+            inputbox.location['x'] + inputbox.size['width'] / 2,
+            512,
+            delta=10
+        )
+        # 그는 새로운 리스트를 시작하고 입력 상자가
+        # 가운데 배치된 것을 확인한다.
+
+        inputbox.send_keys("testing\n")
+        inputbox: WebElement = self.browser.find_element(By.ID, 'id_new_item')
+        self.assertAlmostEqual(
+            inputbox.location['x'] + inputbox.size['width'] / 2,
+            512,
+            delta=10
+        )
