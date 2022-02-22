@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 from lists.models import Item, List
 
 # Create your views here.
@@ -21,7 +22,7 @@ def view_list(request, list_id):
     list_ = List.objects.get(id=list_id)
     return render(request, 'list.html', {'list': list_})
 
-
+@csrf_exempt
 def add_item(request, list_id):
     list_ = List.objects.get(id=list_id)
     Item.objects.create(text=request.POST['item_text'], list=list_)
