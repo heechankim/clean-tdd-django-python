@@ -1,6 +1,6 @@
 PROJECT: superlists
 SOURCE: 클린코드를 위한 테스트 주도 개발
-CURRENT: 148 page
+CURRENT: 162 page
 
 # 2022.01.22 6장 최소 동작 사이트 구축
 DONE: FT가 끝난 후에 결과물을 제거한다.
