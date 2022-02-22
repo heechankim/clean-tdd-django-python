@@ -14,13 +14,12 @@
             <div class="col-md-6 col-md-offset-3 jumbotron">
                 <div class="text-center">
                     <h1>{% block header_text %}{% endblock %}</h1>
-                    <form method="POST" action="{% block form_action %}{% endblock %}">
+                    <form method="POST" action="{% block form_action %}{% endblock %}"> {% csrf_token %}
                         <input name="item_text"
                                id="id_new_item"
                                class="form-control input-lg"
                                placeholder="작업 아이템 입력"
                         />
-                        {% csrf_token %}
                     </form>
                 </div>
             </div>
