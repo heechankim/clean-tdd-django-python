@@ -3,7 +3,7 @@ async-generator==1.10
 attrs==21.4.0
 certifi==2021.10.8
 cffi==1.15.0
-cryptography==36.0.1
+cryptography==42.0.2
 Django @ file:///home/conda/feedstock_root/build_artifacts/django_1638897748254/work
 h11==0.12.0
 idna==3.3
